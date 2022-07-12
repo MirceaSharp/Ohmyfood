@@ -1,0 +1,241 @@
+@media only screen and (max-width:450px){
+   
+    .yes{
+        
+        width: 400px;
+        height: 350px;
+    }
+    .restaurants{
+        background-color: lightgray;
+        width: 400px;
+        flex-direction: column;
+       
+    }
+       
+}
+*,*::before, *::after {
+    box-sizing: border-box;
+  }
+
+.ohmyfoodLogo{
+   
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        
+      
+}
+
+.yes{
+    background-color:lightgray;
+    
+}
+h2{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+.exploreButton{
+    background-color: #9356DC ;
+    color: white;
+    align-items: center;
+    height: 60px;
+  width: 250px;
+  border-radius: 25px;
+ font-size: large;
+}
+.buttonContainer{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+     
+}
+.ParisBox{
+    background-color: rgba(128, 128, 128, 0.712);
+    height: 65px;
+}
+
+.button{
+
+    justify-content: center;
+    align-items: center;
+       
+    border-radius: 25px;
+    display: flex;
+  flex-direction: row;
+    background-color: lightgray;
+    gap: 3em;
+    height: 60px;
+}
+.button:hover{
+    background-color: #FF79DA ;
+}
+.restaurants{
+    background-color: lightgray;
+   
+    display:flex;
+    flex-wrap: wrap;
+  
+}
+.restaurantImage{
+
+  width: 350px;
+  height: 300px;
+  border-radius: 15px;
+
+
+
+}
+.restaurantBox{
+    
+    width: 350px;
+   position: relative;
+    border-radius: 15px;
+    background-color: white;
+}
+.laPaletteImage{
+margin-bottom: -4em;
+    width: 390px;
+    height: 300px;
+   
+}
+.mainBodyPalette{
+    background-color: lightgray;
+  
+   padding-left: 3em;
+   padding-right: 3em;
+    align-items: center;
+    position: relative;
+    border-radius: 15px;
+    width: 390px;
+ 
+}
+.menuItem{
+    background-color: white;
+ 
+  border-radius: 15px;
+height: 70px;
+width: 250px;
+
+opacity: 0;
+  animation: 2s fadeIn;
+  animation-fill-mode: forwards;
+  transition: opacity 1.5s;
+
+
+}
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+ .orderButton{
+    background-color: purple;
+    color: white;
+    width: 250px;
+    height: 60px;
+    border-radius:15px;
+ }
+.bastilleContent{
+    max-width: max-content;
+    margin: auto;
+}
+.theEnchantedPlateContent{
+    max-width: max-content;
+    margin: auto;
+}
+.theFullPaletteContent{
+    max-width: max-content;
+    margin: auto;
+}
+.leGourmandContent{
+    max-width: max-content;
+    margin: auto;
+}
+.newLabel{
+    background-color: #99E2D0;
+
+    position: absolute;
+    top: 15px;
+   text-align: center;
+    right: 16px;
+    width: 60px;
+    height: 32px;
+    line-height: 33px;
+
+}
+
+#spinner {
+    position: fixed;
+    top: 0; left: 0; z-index: 9999;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 0.2s linear;
+    animation:fadeout 1s linear;
+    
+    
+   
+  }
+   
+  /* (B) CENTER LOADING SPINNER */
+  #spinner img {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%);
+  }
+   
+  
+  
+
+@keyframes fadeout{
+
+    0%{
+
+        opacity: 1;
+        
+    }
+   
+    100%{
+    
+    opacity: 0;
+   visibility: hidden;
+    }
+    
+}
+
+
+  .animation{
+position: relative;
+top: 0;
+left: 0;
+width: 100px;
+height: 100px;
+background-color: green;
+border-radius: 50%;
+animation: moving 2s linear infinite;
+  }
+
+  @keyframes moving{
+
+    0%{
+        top:0;
+        left: 0;
+      }
+      25%{
+        top: 0;
+        left: 400px;
+      }
+      100%{
+        top: 400px;
+        left: 400px;
+      }
+  }
+ 
+  
