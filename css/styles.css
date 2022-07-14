@@ -118,7 +118,7 @@ margin-bottom: -4em;
     background-color: white;
  
   border-radius: 15px;
-height: 70px;
+height: 40px;
 width: 250px;
 
 opacity: 0;
@@ -128,6 +128,25 @@ opacity: 0;
 
 
 }
+.menuBox:hover .checkmark{
+ animation: spinningCheckmark 2s  0.6s 1;
+ visibility:visible;
+
+
+}
+
+
+@keyframes spinningCheckmark{
+  100% { visibility: visible;
+    margin-left: 25px; transform: translate(-40px,0)rotate(-360deg) 
+   ;}
+}
+
+.favicon{
+  width: 40px;
+  height: 40px;
+}
+
 @keyframes fadeIn {
     from {
       opacity: 0;
@@ -172,70 +191,111 @@ opacity: 0;
 
 }
 
-#spinner {
-    position: fixed;
-    top: 0; left: 0; z-index: 9999;
-    width: 100vw; height: 100vh;
-    background: rgba(0, 0, 0, 0.7);
-    transition: opacity 0.2s linear;
-    animation:fadeout 1s linear;
-    
-    
+
    
+.parent__spinner{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  opacity:1;
+  animation: fade;
+  animation-duration: 0s;
+  animation-delay:3s;
+  animation-fill-mode: forwards;
   }
-   
-  /* (B) CENTER LOADING SPINNER */
-  #spinner img {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%);
+
+
+.loading__spiner{/*création du loader*/
+border: 20px solid white;
+border-top:20px solid red;
+border-bottom: 20px solid red;
+border-radius: 50%;/*arrondi des angles*/
+width:100px;
+height:100px;
+margin: auto;/*placement milieu de page*/
+position:absolute;
+right:0;
+top:0;
+bottom:0;
+left:0;
+animation-name:spin;
+animation-duration:3s;
+animation-fill-mode:forwards;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    visibility:visible;
   }
-   
+  50%{
+    transform: rotate(180deg);
+    visibility:visible;
+  }
+  to {
+    transform: rotate(360deg);
+    visibility:hidden;
   
-  
+    height:0;
+    width:0;
 
-@keyframes fadeout{
+}
+}
 
-    0%{
+@keyframes fade {
+from{
+  opacity:1;
+  display: block;
+}
+to{
+  opacity:0;
+  z-index:-100;
+  display:none;
+  height:0;
+  width:0;
+  display: none;
+  clip-path:circle(0);/* rognage de la totalité donc disparition*/
+}
+ }
 
-        opacity: 1;
-        
-    }
-   
-    100%{
-    
-    opacity: 0;
-   visibility: hidden;
-    }
-    
+@keyframes monanim {
+from{
+overflow:hidden;
+}
+to{
+overflow:visible;
+}
 }
 
 
-  .animation{
-position: relative;
-top: 0;
-left: 0;
-width: 100px;
-height: 100px;
-background-color: green;
-border-radius: 50%;
-animation: moving 2s linear infinite;
-  }
+.body {
+animation: monanim;
+animation-duration: 3s;
+}
 
-  @keyframes moving{
 
-    0%{
-        top:0;
-        left: 0;
-      }
-      25%{
-        top: 0;
-        left: 400px;
-      }
-      100%{
-        top: 400px;
-        left: 400px;
-      }
-  }
  
+ 
+
+.menuBox{
+  display: flex;
+  flex-direction: row;
   
+}
+
+  .checkmark{
+  
+    visibility: hidden;
+  }
+  
+    
+   
