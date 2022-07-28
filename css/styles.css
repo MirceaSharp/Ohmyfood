@@ -11,6 +11,13 @@
         flex-direction: column;
        
     }
+    .restaurantsText{
+      width: 400px;
+    }
+    footer{
+      width: 400px;
+    }
+    
        
 }
 *,*::before, *::after {
@@ -76,10 +83,10 @@ h1{
 }
 .restaurants{
     background-color: lightgray;
-   
+   gap: 0.5em;
     display:flex;
     flex-wrap: wrap;
-  
+    justify-content: center;
 }
 .restaurantImage{
 
@@ -96,6 +103,7 @@ h1{
    position: relative;
     border-radius: 15px;
     background-color: white;
+   
 }
 .laPaletteImage{
 margin-bottom: -4em;
@@ -207,10 +215,14 @@ opacity: 0;
   height: 100%;
   width: 100%;
   opacity:1;
+  -webkit-animation-delay: 3s !important;
+  -webkit-animation-duration: 0s !important;
+  -webkit-animation-name: fade !important;
   animation: fade;
   animation-duration: 0s;
   animation-delay:3s;
   animation-fill-mode: forwards;
+
   }
 
 
@@ -230,6 +242,11 @@ left:0;
 animation-name:spin;
 animation-duration:3s;
 animation-fill-mode:forwards;
+
+-webkit-animation-name: spin !important;
+-webkit-animation-duration: 3s !important;
+-webkit-animation-fill-mode: forwards !important;
+
 }
 
 @keyframes spin {
@@ -281,9 +298,27 @@ overflow:visible;
 animation: monanim;
 animation-duration: 3s;
 }
-
-
  
+.restaurantsText{
+ width: 100%;
+}
+
+footer{
+ background-color:  black;
+ 
+}
+.links{
+  color: beige;
+  text-align: center;
+}
+
+
+ .footerLogo{
+ filter: invert(1);
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
+ }
  
 
 .menuBox{
@@ -297,5 +332,20 @@ animation-duration: 3s;
     visibility: hidden;
   }
   
-    
+
+   .heartIconIndex{
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+   } 
+
+   .heartIcon{
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    right: 15px;
+    top:-3px;
    
+   }
