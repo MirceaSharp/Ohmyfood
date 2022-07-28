@@ -1,10 +1,6 @@
 @media only screen and (max-width:450px){
    
-    .yes{
-        
-        width: 400px;
-        height: 350px;
-    }
+    
     .restaurants{
         background-color: lightgray;
         width: 400px;
@@ -84,9 +80,14 @@ h1{
 .restaurants{
     background-color: lightgray;
    gap: 0.5em;
-    display:flex;
+    
+   
+   display:-webkit-flex;
+
+   
     flex-wrap: wrap;
     justify-content: center;
+    
 }
 .restaurantImage{
 
@@ -215,13 +216,17 @@ opacity: 0;
   height: 100%;
   width: 100%;
   opacity:1;
-  -webkit-animation-delay: 3s !important;
-  -webkit-animation-duration: 0s !important;
-  -webkit-animation-name: fade !important;
+
   animation: fade;
   animation-duration: 0s;
   animation-delay:3s;
   animation-fill-mode: forwards;
+
+  -webkit-animation-delay: 3s !important;
+  -webkit-animation-duration: 0s !important;
+  -webkit-animation: fade;
+ -webkit-animation-fill-mode: forwards !important;
+  
 
   }
 
@@ -239,65 +244,58 @@ right:0;
 top:0;
 bottom:0;
 left:0;
-animation-name:spin;
-animation-duration:3s;
-animation-fill-mode:forwards;
 
 -webkit-animation-name: spin !important;
 -webkit-animation-duration: 3s !important;
 -webkit-animation-fill-mode: forwards !important;
 
+
 }
 
-@keyframes spin {
+
+@-webkit-keyframes spin {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
     visibility:visible;
   }
   50%{
-    transform: rotate(180deg);
+    -webkit-transform: rotate(90deg);
     visibility:visible;
   }
-  to {
-    transform: rotate(360deg);
+  75%{
+    -webkit-transform: rotate(180deg);
+visibility: visible;
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    
     visibility:hidden;
-  
     height:0;
     width:0;
 
 }
 }
 
-@keyframes fade {
-from{
-  opacity:1;
-  display: block;
-}
-to{
-  opacity:0;
-  z-index:-100;
-  display:none;
-  height:0;
-  width:0;
-  display: none;
-  clip-path:circle(0);/* rognage de la totalité donc disparition*/
-}
- }
-
-@keyframes monanim {
-from{
-overflow:hidden;
-}
-to{
-overflow:visible;
-}
-}
+@-webkit-keyframes fade {
+  from{
+    opacity:1;
+    display: block;
+  }
+  to{
+    opacity:0;
+    z-index:-100;
+    display:none;
+    height:0;
+    width:0;
+    
+    clip-path:circle(0);/* rognage de la totalité donc disparition*/
+  }
+   }
 
 
-.body {
-animation: monanim;
-animation-duration: 3s;
-}
+
+
+
  
 .restaurantsText{
  width: 100%;

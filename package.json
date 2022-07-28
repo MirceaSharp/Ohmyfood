@@ -4,7 +4,7 @@
     "description": "Order food online",
     "main": "index.html",
     "scripts": {
-        "prefix": "postcss /css/styles.css --use autoprefixer -d ./public/css/prefixed/"
+        "prefix": "postcss /css/styles.css --use autoprefixer -d index.html"
     },
     "author": "",
     "license": "ISC",
