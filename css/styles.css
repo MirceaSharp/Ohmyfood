@@ -82,11 +82,13 @@ h1{
    gap: 0.5em;
     
    
-   display:-webkit-flex;
+   display: -webkit-inline-box;
+   flex-wrap: wrap;
+   display: flex;
+   justify-content: center;
+   text-align: justify;
 
-   
-    flex-wrap: wrap;
-    justify-content: center;
+    
     
 }
 .restaurantImage{
@@ -117,10 +119,11 @@ margin-bottom: -4em;
   
    padding-left: 3em;
    padding-right: 3em;
-    align-items: center;
+   
     position: relative;
     border-radius: 15px;
     width: 390px;
+   
  
 }
 .menuItem{
@@ -131,23 +134,28 @@ height: 40px;
 width: 250px;
 
 opacity: 0;
+-webkit-animation: 2s fadeIn !important;
   animation: 2s fadeIn;
+  -webkit-animation-fill-mode: forwards !important;
   animation-fill-mode: forwards;
+  -webkit-transition: opacity 1.5s !important;
   transition: opacity 1.5s;
 
 
 }
 .menuBox:hover .checkmark{
- animation: spinningCheckmark 2s  0.6s 1;
+-webkit-animation: spinningCheckmark 2s 0.6s 1;
+animation: spinningCheckmark 2s 0.6s 1;
  visibility:visible;
 
 
 }
 
 
-@keyframes spinningCheckmark{
+@-webkit-keyframes spinningCheckmark{
   100% { visibility: visible;
-    margin-left: 25px; transform: translate(-40px,0)rotate(-360deg) 
+    
+    margin-left: 25px; -webkit-transform: translate(-40px,0)rotate(-360deg) 
    ;}
 }
 
@@ -156,7 +164,7 @@ opacity: 0;
   height: 40px;
 }
 
-@keyframes fadeIn {
+@-webkit-keyframes fadeIn {
     from {
       opacity: 0;
     }
@@ -171,22 +179,12 @@ opacity: 0;
     height: 60px;
     border-radius:15px;
  }
-.bastilleContent{
+.restaurantContent{
     max-width: max-content;
     margin: auto;
+    text-align: center;
 }
-.theEnchantedPlateContent{
-    max-width: max-content;
-    margin: auto;
-}
-.theFullPaletteContent{
-    max-width: max-content;
-    margin: auto;
-}
-.leGourmandContent{
-    max-width: max-content;
-    margin: auto;
-}
+
 .newLabel{
     background-color: #99E2D0;
 
@@ -322,6 +320,8 @@ footer{
 .menuBox{
   display: flex;
   flex-direction: row;
+  
+  display: -webkit-box;
   
 }
 
