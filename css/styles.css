@@ -423,7 +423,9 @@ right: -44px;
 position: relative;
 }
   
-  
+  .fa-thin fa-circle-check{
+    color:green;
+  }
 
    .heartIconIndex{
     width: 55px;
@@ -463,7 +465,7 @@ position: relative;
      
    }
    .contactLink{
-    color: beige;
+    color: white;
     text-decoration: inherit;
    }
    
