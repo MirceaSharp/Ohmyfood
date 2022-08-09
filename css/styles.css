@@ -2,7 +2,7 @@
    
     
     .restaurants{
-        background-color: lightgray;
+        background-color: #f1f0f0;
         width: 400px;
         flex-direction: column;
        
@@ -68,7 +68,7 @@ h3{
     border-radius: 25px;
     display: flex;
   flex-direction: row;
-    background-color: lightgray;
+    background-color: #f1f0f0;
     gap: 3em;
     height: 60px;
 }
@@ -76,7 +76,7 @@ h3{
     background-color: #FF79DA ;
 }
 .restaurants{
-    background-color: lightgray;
+    background-color: #f1f0f0;
    gap: 0.5em;
    display: -webkit-inline-box;
    flex-wrap: wrap;
