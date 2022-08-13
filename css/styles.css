@@ -61,6 +61,7 @@ h1,h2{
 }
 .discoverText{
   font-weight: 300;
+
 }
 .parisText{
 
@@ -154,6 +155,30 @@ position: absolute;
    
         
 }
+/*
+.mainButton:before{
+  content: "";
+  z-index: -1;
+position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: lightgrey;
+  transform: translateY(5px) scale(1.0);
+  filter: blur(1px);
+  opacity: 0.7;
+  transition: opacity 0.3s;
+  border-radius: inherit;
+  
+  }
+.mainButton:hover:before{
+    
+    opacity: 1;
+   
+        
+}
+*/
 .mainButton:hover{
   background-color: #f3e9ff  ;
 }
@@ -181,13 +206,19 @@ position: absolute;
 }
 .menuCategory{
   font-weight: 300;
+    position: relative;
+    left: -35px;
 }
 .greenHorizontalLine{
+  
   background-color: #99E2D0;
   width: 46px;
   height: 5px;
   margin-top: -15px;
   margin-bottom: 20px;
+  position: relative;
+  left: -34px;
+
 }
 .restaurantBox{    
     width: 350px;
@@ -248,8 +279,8 @@ margin-bottom: -7em;
     background-color: white; 
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
-height: 60px;
-width: 250px;
+height: 67px;
+width: 251px;
 opacity: 0;
 -webkit-animation: 2s fadeIn !important;
   animation: 2s fadeIn;
@@ -257,31 +288,66 @@ opacity: 0;
   animation-fill-mode: forwards;
   -webkit-transition: opacity 1.5s !important;
   transition: opacity 1.5s;
-  display: grid;
-
-}
-.menuItemBox:hover .checkmark{
--webkit-animation: spinningCheckmark 2s 0.6s 1;
-animation: spinningCheckmark 2s 0.6s 1;
- visibility:visible;
-
+  
+  text-overflow:ellipsis;
+  overflow:hidden;
+  white-space: nowrap;
  
 }
 
 
-@-webkit-keyframes spinningCheckmark{
-  100% { visibility: visible;
-    
-    margin-left: 125px; -webkit-transform: translate(-100px,0)rotate(-360deg);}
-  
-  
+.menuItemBox:hover .checkmark {
+-webkit-animation: spinningCheckmark 1s 0.6s 1;
+animation: spinningCheckmark 1s 0.6s 1;
+ visibility:visible;
+
+ 
+}
+.menuItemBox:hover .checkmarkIcon{
+  -webkit-animation: spinningCheckmarkImage 1s 0.6s 1;
+animation: spinningCheckmarkImage 1s 0.6s 1;
+ visibility:visible;
+
 }
 
-.addToOrderFavicon{
-  width: 10px;
-  height: 10px;
-  top: 10px;
+@-webkit-keyframes spinningCheckmark{
+  0% { visibility: visible;
+    
+   }
+100%{
+   
+    margin-left: 125px;
+  -webkit-transform:translate(-80px,0);
+   }
+  }
+  @-webkit-keyframes spinningCheckmarkImage{
+    0% { visibility: visible;
+      
+     }
+  100%{
+     
+      margin-left: 125px;
+    -webkit-transform:translate(-120px,0)rotate(-360deg);
+     }
+    }
+
+ 
+.checkmarkIcon{
+  width: 50px;
+  height: 50px;
+  position: relative;
+ border-radius: 25px;
+  right: -7px;
+  top: -81px;
+}
+
+.checkmarkBackground{
+  width: 67px;
+    height: 67px;
+    top: -20px;
     position: relative;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
 }
 
 @-webkit-keyframes fadeIn {
@@ -408,10 +474,11 @@ font-size: larger
   position: relative;
     left: -35px;
     width: 363px;
+ 
   
 }
 .checkmark{
-  
+  display: inline-block;
     
     background-color: white;
     visibility: hidden;
@@ -419,13 +486,12 @@ font-size: larger
 width: 40px;
 height: 40px;
 top: 20px;
-right: -44px;
+right: -17px;
 position: relative;
+fill: #009572;
+  
 }
   
-  .fa-thin fa-circle-check{
-    color:green;
-  }
 
    .heartIconIndex{
     width: 55px;
