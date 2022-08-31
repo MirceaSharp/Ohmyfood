@@ -304,6 +304,7 @@ opacity: 0;
   text-overflow:ellipsis;
   overflow:hidden;
   white-space: nowrap;
+  
  
 }
 p{
@@ -312,39 +313,52 @@ p{
   white-space: nowrap;
 }
 
+.left{
+  background: #99E2D0;
+  width: 1px;
+  height: 70px;
+  transform-origin: right;
+  position: relative;
+  right: -85px;
+  top: 1px;
+  transition: all 1s ease;
+ visibility: hidden;
+  
+}
+
+
 
 .menuItemBox:hover .checkmark {
--webkit-animation: spinningCheckmark 1s 0.6s 1;
-animation: spinningCheckmark 1s 0.6s 1;
- visibility:visible;
+  
+transform: scaleX(130);  
 
+  transition-duration: 1s;
+  transform-origin: right;
+visibility: visible;
+  margin-left: 100px;
+  
+  
  
 }
 .menuItemBox:hover .checkmarkIcon{
   -webkit-animation: spinningCheckmarkImage 1s 0.6s 1;
 animation: spinningCheckmarkImage 1s 0.6s 1;
- visibility:visible;
+visibility: visible;
+transition-delay: 1s;
+ 
 
 }
 
-@-webkit-keyframes spinningCheckmark{
-  0% { visibility: visible;
-    
-   }
-100%{
-   
-    margin-left: 125px;
-  -webkit-transform:translate(-80px,0);
-   }
-  }
+
   @-webkit-keyframes spinningCheckmarkImage{
-    0% { visibility: visible;
+    from {   visibility: visible;}
+    
+    
       
-     }
-  100%{
-     
-      margin-left: 125px;
-    -webkit-transform:translate(-120px,0)rotate(-360deg);
+  to{
+    -webkit-transform:rotate(360deg);
+    visibility: visible;
+   
      }
     }
 
@@ -354,18 +368,12 @@ animation: spinningCheckmarkImage 1s 0.6s 1;
   height: 50px;
   position: relative;
  border-radius: 25px;
-  right: -7px;
-  top: -81px;
+ visibility: hidden;
+ top: 9px;
+
 }
 
-.checkmarkBackground{
-  width: 68px;
-    height: 71px;
-    top: -20px;
-    position: relative;
-    border-top-right-radius: 16px;
-    border-bottom-right-radius: 16px;
-}
+
 
 @-webkit-keyframes fadeIn {
     from {
@@ -491,21 +499,20 @@ font-size: larger
   position: relative;
     left: -35px;
     width: 363px;
+    overflow: hidden;
  
   
 }
 .checkmark{
-  display: inline-block;
-    
-    background-color: white;
-    visibility: hidden;
-   border-radius: 15px;
-width: 40px;
-height: 40px;
-top: 20px;
-right: -17px;
-position: relative;
-fill: #009572;
+  background: #99E2D0;
+  width: 1px;
+  height: 70px;
+  transform-origin: right;
+  position: relative;
+  right: -85px;
+  
+  transition: all 1s ease;
+ visibility: hidden;
   
 }
   
